@@ -1,0 +1,15 @@
+server:
+  port: 8773
+
+spring:
+  application:
+    name: eureka-client
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+#    instance-id: localhost:${server.port}:${spring.application.name}:@project.version@
+    hostname: ${spring.cloud.client.ip-address}
+#    ip-address: 127.0.0.1
